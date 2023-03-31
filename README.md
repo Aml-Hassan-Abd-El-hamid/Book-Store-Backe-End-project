@@ -5,7 +5,16 @@ Our project is depending on ***NodeJs*** to build a Book Store, Which provides d
 
 In File: [Books.js](https://github.com/Nourelshehry/Book-Store-Backe-End-project/blob/main/models/book.js) you can see the basic set of books which we created.
 
-The Basic functions we used is: ***Get***, ***Post***, ***Delete***, and ***Put*** to make basic proccesses in our BookSet, you can see this here: controller link . With help of **Postman** these functions are applied. Like that:
+The Basic functions we used is: ***Get***, ***Post***, ***Delete***, and ***Put*** to make basic proccesses in our BookSet, you can see this here: [BookController](https://github.com/Aml-Hassan-Abd-El-hamid/Book-Store-Backe-End-project/blob/WarmUP-task/controllers/book_controller.js)  . With help of **Postman** these functions are applied. Like that:
+
+
+**Post**
+
+*Adding book by ID:4:*
+
+![new](https://user-images.githubusercontent.com/76706477/229152745-e1def581-3450-4807-888e-89775b6d60dd.png)
+
+
 
 **Get**
 
@@ -14,14 +23,21 @@ The Basic functions we used is: ***Get***, ***Post***, ***Delete***, and ***Put*
 ![95](https://user-images.githubusercontent.com/76706477/229019758-c79cd33d-d521-4695-a075-736832f430d1.png)
 
 
-*Getting one book by ID:*
+*Getting one book by ID:1*
 
 ![96](https://user-images.githubusercontent.com/76706477/229019871-c6127a68-c793-4205-b253-d49e7969ddba.png)
 
 
+**Put**
+
+*Editing specific book by ID:4*
+
+![98](https://user-images.githubusercontent.com/76706477/229020118-1ca29141-3731-4ced-a527-18673f0e64f6.png)
+
+
 **Delete**
 
-**Deleting all books:*
+**Deleting one book ID:2 and showing the rest books:*
 
 ![100](https://user-images.githubusercontent.com/76706477/229020317-87ae0b19-66f8-42da-8236-b90a3040b641.png)
 
@@ -31,24 +47,13 @@ The Basic functions we used is: ***Get***, ***Post***, ***Delete***, and ***Put*
 ![99](https://user-images.githubusercontent.com/76706477/229020287-f5c0ecf4-deb6-483f-b807-31485d036231.png)
 
 
-**Post**
 
-*Adding book:*
-
-![97](https://user-images.githubusercontent.com/76706477/229019934-53c06d7b-5864-43ac-8fc5-c1e583922039.png)
-
-
-**Put**
-
-*Editing specific book by ID:*
-
-![98](https://user-images.githubusercontent.com/76706477/229020118-1ca29141-3731-4ced-a527-18673f0e64f6.png)
 
 
 
 
 *Note*
 
-1-The validation function file:(link) is used to validate the rules which we predetermined, we call it in need (e.g.: ***Put*** and ***Post***).
+1-The validation function file: [BookValidation](https://github.com/Aml-Hassan-Abd-El-hamid/Book-Store-Backe-End-project/blob/WarmUP-task/helper/validation.js) is used to validate the rules which we predetermined, we call it in need (e.g.: ***Put*** and ***Post***).
 
-2-The Rouer file: (link)  is used to access all functions when it's called.
+2-The Router file: [BookRouter](https://github.com/Aml-Hassan-Abd-El-hamid/Book-Store-Backe-End-project/blob/WarmUP-task/routes/book_router.js)  is used to access all functions when it's called.
