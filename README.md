@@ -59,7 +59,7 @@ The Basic functions we used is: ***Get***, ***Post***, ***Delete***, and ***Put*
 2-The Router file: [BookRouter](https://github.com/Aml-Hassan-Abd-El-hamid/Book-Store-Backe-End-project/blob/WarmUP-task/routes/book_router.js)  is used to access all functions when it's called.
 
 
-......................................................................................................................................................................
+.............................................................................................................................................................................
 ## Task Two
 In this task, We created a simple Nosql DataBase in ***MongoDB***:
 it's consists of 
@@ -71,6 +71,10 @@ it's consists of
 3-**Order**: This order contains all books the user has chosen (Each user with specific order). We handle the case of ordering some ***Books*** which is above the number of our available books, In addition to making user able to Enter his information (e.g. Address, Name, Email, PhoneNumber,...) and in case of confirmation order (checkout) the total price is calculated, and the quantity of available books also.
 
 
+The relation between tables:
 
 
+
+
+**User** can Edit his informations, the book quantities he needs, and confirms his order which affects the **Books** and orders DB as shown:
 
