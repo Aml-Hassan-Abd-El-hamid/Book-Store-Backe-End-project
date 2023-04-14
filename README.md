@@ -76,5 +76,5 @@ The relation between tables:
 
 
 
-**User** can Edit his informations, the book quantities he needs, and confirms his order which affects the **Books** and orders DB as shown:
+**User** can Edit his informations, the book quantities he needs, and confirms his order which affects the **Books** and **Orders** DB as shown:
 
