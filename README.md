@@ -57,3 +57,20 @@ The Basic functions we used is: ***Get***, ***Post***, ***Delete***, and ***Put*
 1-The validation function file: [BookValidation](https://github.com/Aml-Hassan-Abd-El-hamid/Book-Store-Backe-End-project/blob/WarmUP-task/helper/validation.js) is used to validate the rules which we predetermined, we call it in need (e.g.: ***Put*** and ***Post***).
 
 2-The Router file: [BookRouter](https://github.com/Aml-Hassan-Abd-El-hamid/Book-Store-Backe-End-project/blob/WarmUP-task/routes/book_router.js)  is used to access all functions when it's called.
+
+
+......................................................................................................................................................................
+## Task Two
+In this task, We created a simple Nosql DataBase in ***MongoDB***:
+it's consists of 
+
+1- **Books**: Which contains all books in DB which have some attributes, such like: BookName, BookAuthor, PublicationYear, and BookCount.
+
+2- **User**: User can make ***order*** by choosing any available books, each user has an specific ***order*** in which we can specify and calculate all total amount of books he has orderd.
+
+3-**Order**: This order contains all books the user has chosen (Each user with specific order). We handle the case of ordering some ***Books*** which is above the number of our available books, In addition to making user able to Enter his information (e.g. Address, Name, Email, PhoneNumber,...) and in case of confirmation order (checkout) the total price is calculated, and the quantity of available books also.
+
+
+
+
+
