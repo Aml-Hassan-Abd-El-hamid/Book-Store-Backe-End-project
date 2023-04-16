@@ -18,7 +18,9 @@ const orderSchema= Schema({
     amount:{
         type :Number,
     },
-
+    status:{
+        type: String,
+    },
     userId:{
         type: Schema.Types.ObjectId,
         ref: 'User',
