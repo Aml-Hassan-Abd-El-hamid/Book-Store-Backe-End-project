@@ -1,21 +1,34 @@
 const { Order }= require('../modles/order');
 const {Book} = require('../modles/book');
+const {User} = require('../modles/user');
 
-
+// api userId
+const getAllOrdersByUserID=  async (req, res)=>{
+    try{ // find   return list
+        console.log("hiiiiii");
+        const allOrders = await Order.find({userId: req.params.userId});
+        //console.log("hiiiiii55555555555555"+ allOrders);
+        res.status(200).send(allOrders);
+    }catch(error){
+        res.status(400).send(error);
+    }
+};
 
 //api 
 const addOrder= async (req, res)=>{
     try{
        const book= await Book.findOne({_id: req.body.bookId});
-        
+       const user= await User.findOne({_id: req.body.userId}); 
 
         if(book.count >= req.body.quantity ){
           //  console.log("hiii1111111111111111111111");
-        if(book._id== req.body.bookId)
+        if((book._id== req.body.bookId) && (user._id == req.body.userId))
         { //console.log("hii222222222222222222222222");
         const order = await Order.create(req.body);
             order.quantity= req.body.quantity;
             order.amount= book.price*order.quantity;
+            
+            order.status= "not confirmed";
             await order.save();
             res.status(200).send(order);
             }
@@ -38,6 +51,10 @@ const editOrder= async (req, res) =>{
         const book= await Book.findOne({_id: order.bookId});
 
         //for authorization purpose
+         if(!order){
+            res.status(400).send("Order not found");
+        }
+        
         if(req.params.userId== order.userId){
             if(req.body.phoneNumber){
                 order.phoneNumber= req.body.phoneNumber;
@@ -90,9 +107,13 @@ const deleteOrder= async (req, res)=>{
         //console.log("hiiiiiiiiiiiiiiiii7777777777777");
         if( order.userId == req.params.userId){
           //  console.log("hiiiiiiiiiiiiiiiii");
-            await Order.deleteOne({_id: req.params.orderId})
+            await Order.deleteOne({_id: req.params.orderId});
+             res.status(200).send(order);
         }
-        res.status(200).send(order);
+         else{
+            res.status(400).send("you are not authorized to delete this order");
+        }
+       
     }catch(error){
         res.status(400).send(error);
     }
@@ -102,7 +123,7 @@ const deleteOrder= async (req, res)=>{
 const confirmOrder= async (req, res)=>{
 
     var x=0;
-    var book;
+   // var book;
 
     try{
        // find return list
@@ -117,6 +138,8 @@ const confirmOrder= async (req, res)=>{
             book.count -= allOrders[i].quantity;
             await book.save();
            // console.log(allOrders[i].bookId.count);
+             allOrders[i].status= "Confirmed and Waiting";
+            await  allOrders[i].save();
         } 
         
         console.log(x);       
@@ -130,6 +153,7 @@ const confirmOrder= async (req, res)=>{
 
 module.exports={
 
+     getOrderByID,
     addOrder,
     editOrder,
     confirmOrder,
