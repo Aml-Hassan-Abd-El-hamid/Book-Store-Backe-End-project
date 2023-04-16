@@ -73,7 +73,7 @@ it's consists of
 
 The relation between tables:
 
-![2023-04-14_23h13_57](https://user-images.githubusercontent.com/76706477/232156323-69a09894-65e7-442f-a797-73b1b57d06f2.png)
+![2023-04-17_00h10_56](https://user-images.githubusercontent.com/76706477/232349112-a54c2bf1-a491-4e48-a13f-651ff0a0cedc.png)
 
 
 
