@@ -13,6 +13,15 @@ const getAllOrdersByUserID=  async (req, res)=>{
         res.status(400).send(error);
     }
 };
+//api orderId
+const getOrderByID=  async (req, res)=>{
+    try{ 
+        const order = await Order.findOne({_id: req.params.id});
+        res.status(200).send(order);
+    }catch(error){
+        res.status(400).send(error);
+    }
+};
 
 //api 
 const addOrder= async (req, res)=>{
@@ -152,8 +161,9 @@ const confirmOrder= async (req, res)=>{
 
 
 module.exports={
-
-     getOrderByID,
+    
+    getAllOrdersByUserID,
+    getOrderByID,
     addOrder,
     editOrder,
     confirmOrder,
