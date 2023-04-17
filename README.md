@@ -96,6 +96,12 @@ and we store the price of his order in **orders** table in attribute called ***a
 
 ![order](https://user-images.githubusercontent.com/66439099/232353821-3040e88c-81d2-4f2e-aadc-e99e4c01943b.jpeg)
 
+We make Two functions **editOrder** and **confirmOrder** in [order_controller](https://github.com/Aml-Hassan-Abd-El-hamid/Book-Store-Backe-End-project/blob/main/controllers/order_controller.js)
+
+**editOrder** : it make any user which already request an order to edit on its order details like count of books that he need
+this picture **before** editing order
 
 
+
+![before editing](https://user-images.githubusercontent.com/65909593/232357261-dd0d287d-73e2-4c5a-9030-fd5490a0823d.png)
 
