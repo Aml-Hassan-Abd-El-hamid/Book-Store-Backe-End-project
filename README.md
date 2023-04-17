@@ -101,21 +101,22 @@ We make Two functions **editOrder** and **confirmOrder** in [order_controller](h
 **editOrder** : it make any user which already request an order to edit on its order details like count of books that he need.
 
 this picture **before** editing order.
+![before editing](https://user-images.githubusercontent.com/65909593/232485865-38b62843-ad11-4c67-bfbd-64c80c3ca6e7.png)
 
-![before editing](https://user-images.githubusercontent.com/65909593/232357261-dd0d287d-73e2-4c5a-9030-fd5490a0823d.png)
 
 but this **after** editing order(which edit Phone number and address and quantity of book which he want then amount changed automatically).
+![After editing](https://user-images.githubusercontent.com/65909593/232485912-32297f91-d69f-4e3b-9523-3fb7ef4fab00.png)
 
-![after editing](https://user-images.githubusercontent.com/65909593/232474143-329191ca-4cc9-4738-b98a-03438a53505d.png)
 
 **confirmOrder** : this function for user for confirmation order and after confirm he can't change or edit anything in his order and before confirmation status of
 order will be **not confirmed** but after confirmation will be **confirmed and waiting** mean waiting for shipping for someone.
 
 this picture **before confirmed**
+![before confirmed](https://user-images.githubusercontent.com/65909593/232485946-120df3e5-6496-409f-9333-da32ee4b1760.png)
 
-![before confirmed](https://user-images.githubusercontent.com/65909593/232476773-9b76d6e5-86be-40f6-8665-9e6c397ecb6e.png)
 
 but this **after confirmed**
+![after confirmed](https://user-images.githubusercontent.com/65909593/232485979-3a23b8a5-5611-4a25-82bc-5bd85098e359.png)
 
-![after confirmed](https://user-images.githubusercontent.com/65909593/232477150-989b799f-e559-4d25-8f90-98f77d880e71.png)
+
 
