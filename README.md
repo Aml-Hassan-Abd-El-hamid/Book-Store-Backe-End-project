@@ -75,7 +75,27 @@ The relation between tables:
 
 ![2023-04-17_00h10_56](https://user-images.githubusercontent.com/76706477/232349112-a54c2bf1-a491-4e48-a13f-651ff0a0cedc.png)
 
+now we add 2 books in our **Books** table as shown, each book has its attributes like name, author, price, and ***count*** that shown the number of avaliable books in the store.
+
+*Note*: **we apply CRUID operations in books table**
+
+![books](https://user-images.githubusercontent.com/66439099/232352442-f542b78a-a116-44d3-bbf6-cd73eda30c15.jpeg)
 
 
-**User** can Edit his informations, the book quantities he needs, and confirms his order which affects the **Books** and **Orders** DB as shown:
+now user fill his information like username, password and email to register the website and we saved this data in our **users** table as shown.
+
+*Note*: **we apply CRUID operations in users table**
+
+![user](https://user-images.githubusercontent.com/66439099/232352452-41e49482-86e0-4c6e-9338-f35e049e0ea7.jpeg)
+
+
+now user ready to order books from website, he needs to enter his phonenumber, address and ***quantity*** of the book(we compare the ***quantity*** of book he ordered with the ***count*** of the avaliable books in **books** table).
+and we store the price of his order in **orders** table in attribute called ***amount*** which calculated from price of the book and the quantity of the book he ordered.
+
+*Note*: **we apply CRUID operations in orders table**
+
+![order](https://user-images.githubusercontent.com/66439099/232353821-3040e88c-81d2-4f2e-aadc-e99e4c01943b.jpeg)
+
+
+
 
