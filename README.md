@@ -96,12 +96,26 @@ and we store the price of his order in **orders** table in attribute called ***a
 
 ![order](https://user-images.githubusercontent.com/66439099/232353821-3040e88c-81d2-4f2e-aadc-e99e4c01943b.jpeg)
 
-We make Two functions **editOrder** and **confirmOrder** in [order_controller](https://github.com/Aml-Hassan-Abd-El-hamid/Book-Store-Backe-End-project/blob/main/controllers/order_controller.js)
+We make Two functions **editOrder** and **confirmOrder** in [order_controller](https://github.com/Aml-Hassan-Abd-El-hamid/Book-Store-Backe-End-project/blob/main/controllers/order_controller.js).
 
-**editOrder** : it make any user which already request an order to edit on its order details like count of books that he need
-this picture **before** editing order
+**editOrder** : it make any user which already request an order to edit on its order details like count of books that he need.
 
-
+this picture **before** editing order.
 
 ![before editing](https://user-images.githubusercontent.com/65909593/232357261-dd0d287d-73e2-4c5a-9030-fd5490a0823d.png)
+
+but this **after** editing order(which edit Phone number and address and quantity of book which he want then amount changed automatically).
+
+![after editing](https://user-images.githubusercontent.com/65909593/232474143-329191ca-4cc9-4738-b98a-03438a53505d.png)
+
+**confirmOrder** : this function for user for confirmation order and after confirm he can't change or edit anything in his order and before confirmation status of
+order will be **not confirmed** but after confirmation will be **confirmed and waiting** mean waiting for shipping for someone.
+
+this picture **before confirmed**
+
+![before confirmed](https://user-images.githubusercontent.com/65909593/232476773-9b76d6e5-86be-40f6-8665-9e6c397ecb6e.png)
+
+but this **after confirmed**
+
+![after confirmed](https://user-images.githubusercontent.com/65909593/232477150-989b799f-e559-4d25-8f90-98f77d880e71.png)
 
