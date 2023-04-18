@@ -1,5 +1,6 @@
 const {Admin}= require('../modles/admin');
 const { Order }= require('../modles/order');
+const { User }= require('../modles/user');
 
 //................. get courses............................
 
@@ -63,23 +64,22 @@ const editAdminByID=  async (req, res)=>{
 // api adminId
 const deleteAdmin=  (req, res)=>{
    try{
-    const admin= Admin.deleteOne({_id: req.params.id});
+    const admin= await Admin.findOne({_id: req.params.id});
+    await Admin.deleteOne({_id: req.params.id});
     res.status(200).send(admin);
    }
    catch(error){
     res.status(400).send(error);
    }
 };
+
 //api adminId, orderId
 const confirmShipping= async (req, res)=>{
-    //console.log("qqqqqqqqqqqqqqqqqqqqqqqqqq");
    try{
-    //console.log("qqqqqqqqqqqqqqqqqqqqqqqqqq");
     const admin= await Admin.findOne({_id: req.params.adminId});
     const order= await Order.findOne({_id: req.params.orderId});
     if( admin._id == req.params.adminId){
         if(order.status == "Confirmed and Waiting"){
-        //console.log("ooooooooooooooooo");
         order.status="Order is shipped";
         await order.save();
         res.status(200).send("ok");
@@ -92,7 +92,31 @@ const confirmShipping= async (req, res)=>{
    catch(error){
     res.status(400).send(error);
    }     
-}; 
+};
+
+//api adminId, userId
+const deleteUser= async (req, res)=>{
+   try{
+    const admin= await Admin.findOne({_id: req.params.adminId});
+    const user= await User.findOne({_id: req.params.userId});
+    if( admin._id == req.params.adminId){
+        if(!user){
+            res.status(400).send("invalid userId");
+        }
+        else{
+            await User.deleteOne({_id: req.params.userId});
+            res.status(200).send(user);
+    }}
+   }
+   
+   catch(error){
+   
+    res.status(400).send(error);
+   
+}     
+};
+
+
 
 module.exports= {
     
@@ -102,4 +126,6 @@ module.exports= {
     editAdminByID,
     deleteAdmin,
     confirmShipping,
+        deleteUser,
+
 };
