@@ -3,8 +3,6 @@ const userRouter= Router();
 
 const userController= require('../controllers/user_controller');
 
-//userRouter.get('/', userController.getAllUsers);
-
 userRouter.get('/:id', userController.getUserByID);
 //................... Post.........................................
 userRouter.post('/', userController.addUser);
