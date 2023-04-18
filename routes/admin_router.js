@@ -15,4 +15,6 @@ adminRouter.delete('/:id', adminController.deleteAdmin);
 
 adminRouter.put('/:adminId/:orderId', adminController.confirmShipping);
 
+adminRouter.delete('/:adminId/:userId', adminController.deleteUser);
+
 module.exports= {adminRouter};
