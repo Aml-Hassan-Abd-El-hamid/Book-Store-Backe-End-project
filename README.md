@@ -96,6 +96,27 @@ and we store the price of his order in **orders** table in attribute called ***a
 
 ![order](https://user-images.githubusercontent.com/66439099/232353821-3040e88c-81d2-4f2e-aadc-e99e4c01943b.jpeg)
 
+We make Two functions **editOrder** and **confirmOrder** in [order_controller](https://github.com/Aml-Hassan-Abd-El-hamid/Book-Store-Backe-End-project/blob/main/controllers/order_controller.js).
+
+**editOrder** : it make any user which already request an order to edit on its order details like count of books that he need.
+
+this picture **before** editing order.
+![before editing](https://user-images.githubusercontent.com/65909593/232485865-38b62843-ad11-4c67-bfbd-64c80c3ca6e7.png)
+
+
+but this **after** editing order(which edit Phone number and address and quantity of book which he want then amount changed automatically).
+![After editing](https://user-images.githubusercontent.com/65909593/232485912-32297f91-d69f-4e3b-9523-3fb7ef4fab00.png)
+
+
+**confirmOrder** : this function for user for confirmation order and after confirm he can't change or edit anything in his order and before confirmation status of
+order will be **not confirmed** but after confirmation will be **confirmed and waiting** mean waiting for shipping for someone.
+
+this picture **before confirmed**
+![before confirmed](https://user-images.githubusercontent.com/65909593/232485946-120df3e5-6496-409f-9333-da32ee4b1760.png)
+
+
+but this **after confirmed**
+![after confirmed](https://user-images.githubusercontent.com/65909593/232485979-3a23b8a5-5611-4a25-82bc-5bd85098e359.png)
 
 
 
