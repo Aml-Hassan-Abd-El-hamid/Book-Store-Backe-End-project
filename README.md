@@ -73,7 +73,8 @@ it's consists of
 
 The relation between tables:
 
-![2023-04-17_00h10_56](https://user-images.githubusercontent.com/76706477/232349112-a54c2bf1-a491-4e48-a13f-651ff0a0cedc.png)
+![Schema](https://user-images.githubusercontent.com/65909593/232815227-78754a71-ae5e-4181-acd0-cf15e1a80269.png)
+
 
 now we add 2 books in our **Books** table as shown, each book has its attributes like name, author, price, and ***count*** that shown the number of avaliable books in the store.
 
