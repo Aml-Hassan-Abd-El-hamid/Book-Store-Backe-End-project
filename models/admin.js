@@ -16,20 +16,6 @@ const adminSchema= Schema({
         type: String,
         required: true,
     },
-
-    userId:{
-        type: Schema.Types.ObjectId,
-        ref: 'User',
-    },
-
-    bookId:{
-        type: Schema.Types.ObjectId,
-        ref: 'Book',
-    },
-    orderId:{
-        type: Schema.Types.ObjectId,
-        ref: 'Order',
-    },
 });
 
 
