@@ -1,16 +1,6 @@
 const {User}= require('../modles/user');
 
-//................. get courses............................
 
-// const getAllUsers=  async (req, res)=>{
-//     try{
-//         const allUsers= await User.find({});
-//         res.status(200).send(allUsers);
-//     }catch(error){
-//         res.status(400).send(error);
-//     }
-   
-// };
 
 const getUserByID=  async (req, res)=>{
     try{
@@ -61,8 +51,9 @@ const editUserByID=  async (req, res)=>{
 
 const deleteUser=  (req, res)=>{
    try{
-    const user= User.deleteOne({_id: req.params.id});
-    res.status(200).send(user);
+      const user= await User.findOne({_id: req.params.id});
+      await User.deleteOne({_id: req.params.id});
+      res.status(200).send(user);
    }
    catch(error){
     res.status(400).send(error);
