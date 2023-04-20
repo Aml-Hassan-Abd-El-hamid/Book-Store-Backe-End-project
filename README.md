@@ -121,4 +121,13 @@ but this **after confirmed**
 ![after confirmed](https://user-images.githubusercontent.com/65909593/232485979-3a23b8a5-5611-4a25-82bc-5bd85098e359.png)
 
 
+At this time, it's admin respinsability to handle the ***status*** case, in the **Admin** table which contains some attributes attached to admin himself (Such like:Name, Password, and Email) as shown in our *DB* :
+
+![2023-04-20_10h52_56](https://user-images.githubusercontent.com/76706477/233313766-9ab593e2-7929-49c4-8a31-33a2317e42bb.png)
+
+
+This **Admin** can handle the case of the ***status*** if it arrived to user or not, As shown the ***Status*** is changed from: **Confirmed and Waiting** to: **Shipped** :
+
+
+The Admin can also ***Delete*** (aka block) some users if he needed, when user didn't complete order in the proper way (as user didn't pay his payment of order).
 
